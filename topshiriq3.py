@@ -1,19 +1,20 @@
-x = 2
+x = int(input('x sonni kiriting: '))
 i = 8
 c = 0
 
 while i != 0:
     a = x**2
+    print(f"a = {a}")
     if i == 8:
-        b = (x**i)/(x**2)
-        print(b)
+        b = (2**i)/(x**2)
+        print(f'b = {b}')
     else:
-        b = x**i/c
-        print(b)
+        b = 2**i/c
+        print(f'b = {b}')
     i -= 1
     c = a + b
-    print(c)
+    print(f'c = {c}')
 
-
-print("Javobi:", c)
+javob = x / c
+print("Javobi:", javob)
 
