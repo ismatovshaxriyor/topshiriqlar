@@ -1,7 +1,7 @@
-a = int(input("a sonni kiriting: "))
-b = int(input("b sonni kiriting: ")) 
-c = int(input("c sonni kiriting: "))
-d = int(input("d sonni kiriting: "))
+a = float(input("a sonni kiriting: "))
+b = float(input("b sonni kiriting: ")) 
+c = float(input("c sonni kiriting: "))
+d = float(input("d sonni kiriting: "))
 
 if a <= b <= c <= d:
     a, b, c, d = d, d, d, d
