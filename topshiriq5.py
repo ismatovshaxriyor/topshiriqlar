@@ -1,7 +1,8 @@
-i = input("koordinatalar sonini kiriting: ")
-n = int(i)
+import re  # noqa: F401
 
-def x():
+i = input("koordinatalar sonini kiriting: ")
+
+def x(n):
     i = 1
     xN = 0
     while i < (n + 1):
@@ -9,7 +10,7 @@ def x():
         i += 1
     return float(xN/n)
 
-def y():
+def y(n):
     i = 1
     yN = 0
     while i < (n + 1):
@@ -17,7 +18,7 @@ def y():
         i += 1
     return float(yN/n)
 
-def z():
+def z(n):
     i = 1
     zN = 0
     while i < (n + 1):
@@ -33,8 +34,13 @@ def masofalar():
         i += 1
 
 
-print(f"massa markazi ({x()}, {y()}, {y()}) nuqtada")
-masofalar()
+regex = re.findall("[0-9]", i)
+if regex:
+    n = int(i)
+    print(f"massa markazi ({x(n)}, {y(n)}, {y(n)}) nuqtada")
+    masofalar(n)
+else:
+    print("natural son kiriting")
 
 
 
