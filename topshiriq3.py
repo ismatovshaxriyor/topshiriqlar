@@ -14,7 +14,7 @@ if x != 0:
             print(f'b = {b}')
         i -= 1
         c = a + b
-        print(f'c = {c}')
+        print(f'c = {c}\n')
 
     javob = x / c
     print("Javobi:", javob)
