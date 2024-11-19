@@ -1,23 +1,49 @@
-import numpy as np
+matritsa = [
+    [1, 0, 2, 3, 4, 5, 6, 7],
+    [-12, -3, 34, -32, 62, 12, 32.4],
+    [-23, 54.3, -4.2, 34, -52.7, -32, 17.9],
+    [8, 9, 10, 11, 12, 13, 14],
+    [-12, -32, 45, 2.6, -28.5, -12.7, -32.4],
+    [32, -14.3, -43, 23.7, -12, -43, 23.7],
+    [53, 32, -32, 47, -12.4, -45.6, 60]
+]
 
-# 7x7 o'lchamli matritsa yaratamiz (tasodifiy qiymatlar bilan)
-matritsa = np.random.uniform(-100, 100, (7, 7))  # Haqiqiy turdagi elementlar
-print("Dastlabki matritsa:")
+katta_sonlar = []
+katta_sonlar_index = []
+kichik_sonlar = []
+kichik_sonlar_index = []
+
+def for_max():
+    for row in matritsa:
+        max_element = max(row)
+        max_element_index = row.index(max_element)
+        katta_sonlar.append(max_element)
+        katta_sonlar_index.append(max_element_index)
+    return katta_sonlar, katta_sonlar_index
+
+def for_min():
+    for row in matritsa:
+        min_element = min(row)
+        min_element_index = row.index(min_element)
+        kichik_sonlar.append(min_element)
+        kichik_sonlar_index.append(min_element_index)
+    return kichik_sonlar, kichik_sonlar_index
+
+maximums, max_indexs = for_max()
+minimums, min_indexs = for_min()
+
+matritsa_max = max(maximums)
+print(matritsa_max)
+matritsa_min = min(minimums)
+print(matritsa_min)
+
+matritsa_max_index1 = maximums.index(matritsa_max)
+matritsa_max_index2 = max_indexs[matritsa_max_index1]
+
+matritsa_min_index1 = minimums.index(matritsa_min)
+matritsa_min_index2 = min_indexs[matritsa_min_index1]
+
+matritsa[matritsa_max_index1][matritsa_max_index2], matritsa[matritsa_min_index1][matritsa_min_index2] = matritsa[matritsa_min_index1][matritsa_min_index2], matritsa[matritsa_max_index1][matritsa_max_index2]
+
 print(matritsa)
 
-# Eng katta va eng kichik elementlarni aniqlaymiz
-max_value = matritsa.max()
-min_value = matritsa.min()
-
-# Ularning indekslarini topamiz
-max_index = np.unravel_index(np.argmax(matritsa), matritsa.shape)
-min_index = np.unravel_index(np.argmin(matritsa), matritsa.shape)
-
-print(f"Eng katta qiymat: {max_value}, indeksi: {max_index}")
-print(f"Eng kichik qiymat: {min_value}, indeksi: {min_index}")
-
-# Qiymatlarni almashtiramiz
-matritsa[max_index], matritsa[min_index] = matritsa[min_index], matritsa[max_index]
-
-print("Qiymatlar almashtirilgandan keyingi matritsa:")
-print(matritsa)
