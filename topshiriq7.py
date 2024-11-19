@@ -1,9 +1,9 @@
 matritsa = [
     [1, 0, 2, 3, 4, 5, 6, 7],
     [-12, -3, 34, -32, 62, 12, 32.4],
-    [-23, 54.3, -4.2, 34, -52.7, -32, 17.9],
+    [-23, 54.3, -4.2, -82.1, -52.7, -32, 17.9],
     [8, 9, 10, 11, 12, 13, 14],
-    [-12, -32, 45, 2.6, -28.5, -12.7, -32.4],
+    [-12, -32, 90, 2.6, -28.5, -12.7, -32.4],
     [32, -14.3, -43, 23.7, -12, -43, 23.7],
     [53, 32, -32, 47, -12.4, -45.6, 60]
 ]
@@ -33,17 +33,20 @@ maximums, max_indexs = for_max()
 minimums, min_indexs = for_min()
 
 matritsa_max = max(maximums)
-print(matritsa_max)
+print(f'matritsaning maksimal qiymati: {matritsa_max}')
 matritsa_min = min(minimums)
-print(matritsa_min)
+print(f'matritsaning minimal qiymati: {matritsa_min}')
 
 matritsa_max_index1 = maximums.index(matritsa_max)
 matritsa_max_index2 = max_indexs[matritsa_max_index1]
+print(f"matritsaning maksimal qiymati {matritsa_max_index1 + 1}-qatorning {matritsa_max_index2 + 1}-tartibida joylashgan")
 
 matritsa_min_index1 = minimums.index(matritsa_min)
 matritsa_min_index2 = min_indexs[matritsa_min_index1]
+print(f"matritsaning minimal qiymati {matritsa_min_index1 + 1}-qatorning {matritsa_min_index2 + 1}-tartibida joylashgan")
 
 matritsa[matritsa_max_index1][matritsa_max_index2], matritsa[matritsa_min_index1][matritsa_min_index2] = matritsa[matritsa_min_index1][matritsa_min_index2], matritsa[matritsa_max_index1][matritsa_max_index2]
 
-print(matritsa)
+for row in matritsa:
+    print(row)
 
