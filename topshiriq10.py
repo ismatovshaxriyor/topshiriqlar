@@ -27,11 +27,8 @@ def Oy_kunlari(d):
         print(f"Siz kiritgan oyda {oy_kunlari[d - 1]} kun bor")
     elif d == 11:
         print(f"Siz kiritgan oyda {oy_kunlari[d - 1]} kun bor")
-    elif d == 12:
-        print(f"Siz kiritgan oyda {oy_kunlari[d - 1]} kun bor")
     else:
-        print("1 yil 12 oydan iborat")
-        return False
+        print(f"Siz kiritgan oyda {oy_kunlari[d - 1]} kun bor")
 
 def tugri_sana(d, m):
     if d <= oy_kunlari[m]:
