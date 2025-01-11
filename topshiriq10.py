@@ -34,7 +34,7 @@ def Oy_kunlari(d):
         return False
 
 def tugri_sana(d, m):
-    if d < oy_kunlari[m]:
+    if d <= oy_kunlari[m]:
         print(f"To'g'ri sana kiritildi")
     else:
         print(f"Noto'g'ri sana kiritildi. Siz kiritgan oyda {oy_kunlari[m - 1]} kun bor")
