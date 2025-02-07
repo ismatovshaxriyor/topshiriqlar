@@ -1,12 +1,5 @@
-	
-Sana=[<kun>,<oy>,<yil>]
-Hafta_ kuni=[‘dush’,’sesh’,’chor’,’pay’,’juma’,’shan’,’yak’]
-Berilgan d sana uchun quyidagi masalalar yechilsin:
-a) d-sanaga tegishli bo‘lgan oydagi kunlar sonini hisoblovchi Oy_kunlari(d) funksiyasi tuzilsin
- (kabisa bo‘lmagan yil uchun);
-b) d-sana to‘g‘riligini (masalan, 31 iyun bo‘lmasligi va h.k.) tekshiradigan mantiqiy Tugri_sana(d)
- funksiyasi tuzilsin.
-d) 1-yilning 1-yanvaridan to d-sanagacha necha kun o‘tganligini hisoblaydigan Kunlarsoni(d) funksiyasi
- tuzilsin.
-e) d - sana haftani qaysi kunini aniqlaydigan Hafta_kuni(d) funksiyasi tuzil-sin 
-(eramizning 1-yilining 1-yanvari dushanba (dush) kuni bo‘lganligini hisobga olgan holda).
+Lotin harflaridan tashkil topgan Jumla satri berilgan. Satr, undagi juft o„rinda
+turgan harflarni satr boshiga o„tkazish va toq o„rindagi harflarni teskari tartibda
+qayta joylashtirish orqali shifrlansin va qayta tiklansin. Masalan, “Programma ”
+satri “rgamamroP” satriga aylanadi. Programma
+                                    rgamamroP
