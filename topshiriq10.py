@@ -34,11 +34,27 @@ def tugri_sana(d, m):
     if d <= oy_kunlari[m]:
         print(f"To'g'ri sana kiritildi")
     else:
-        print("1 yil 12 oydan iborat")
-        a = False
-        return a
+        print(f"Noto'g'ri sana kiritildi. Siz kiritgan oyda {oy_kunlari[m - 1]} kun bor")
 
-def tugri_sana():
-    
+def kunlarsoni(d, m):
+    kunlar = 0
+    for i in range(m):
+        kunlar += oy_kunlari[i]
+    print(f"1-yanvardan siz kiritgan sanagacha {kunlar + d} kun bor")
 
-Oy_kunlari(int(sana[1]))
+def hafta_kuni(m, y):
+    kunlar1 = (y - 1) * 365
+    kunlar2 = 0
+    for i in range(m):
+        kunlar2 += oy_kunlari[i]
+    kunlar = kunlar1 + kunlar2
+    hafta_kuni = kunlar % 7
+    print(f"bu kun {hafta_kunlari[math.floor(hafta_kuni)]} ga to'g'ri keladi")
+
+if int(sana[2]) % 4 != 0 and int(sana[1]) <= 12:
+    Oy_kunlari(int(sana[1]))
+    tugri_sana(int(sana[0]), int(sana[1]))
+    kunlarsoni(int(sana[0]), int(sana[1]))
+    hafta_kuni(int(sana[1]), int(sana[2]))
+else:
+    print("Siz kabisa yili yoki noto'g'ri oy kiritdingiz")
