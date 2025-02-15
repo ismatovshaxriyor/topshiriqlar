@@ -1,0 +1,25 @@
+class Node:
+   def __init__(self,d):
+       self.Data = d
+       self.Next = None
+   def __del__(self):
+       print(self.Data," deleted")
+
+class LList:
+   def __init__(self):
+       self.head = None
+    
+    def AddFirst(self, data):
+       node = Node(data)
+       node.Next = self.head
+       self.head=node
+    
+    def Add(self, data):
+       node = Node(data)
+       cur = self.head
+       if cur != None:
+           while cur.Next != None:
+               cur = cur.Next
+           cur.Next=node
+       else:
+           self.head=node
