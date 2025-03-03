@@ -2,7 +2,6 @@ class Node:
     def __init__(self, d):
         self.Data = d
         self.Next = None
-    
 
 class LList:
     def __init__(self):
@@ -31,18 +30,14 @@ class LList:
     
     # <=== 1 - topshiriq ===>
     def firstZero(self):
-        position = 0
         current = self.head
-        while current != None:
-            if current.Data != 0:
-                current = current.Next
-                position += 1
-            else:
-                print(current.Data)
-                print(position)
-                print(current.Next.Data)
-                print("")
-                break
+        while current != None and current.Next != None:
+            if current.Data == 0:
+                nextNode = Node(0)
+                nextNode.Next = current.Next
+                current.Next = nextNode
+                current = nextNode.Next
+            current = current.Next
     
     # <=== 2 - topshiriq ===>
     def findMin(self):
@@ -110,7 +105,15 @@ class LList:
         print(f"Juft sonlar {juft_sonlar} marta uchragan")
     
     # <=== 4 - topshiriq ===>
-    
+    def x(self):
+        current = self.head
+        while current != None and current.Next != None:
+            if current.Data % 2 == 1:
+                nextNode = Node(current.Data)
+                nextNode.Next = current.Next
+                current.Next = nextNode
+                current = nextNode.Next
+            current = current.Next
 
 list1 = LList()
 
@@ -123,7 +126,10 @@ list1.Add(2)
 list1.Add(0)
 list1.Add(19)
 
-list1.juftSonlar()
-list1.delEndMin()
+# list1.firstZero()
+# list1.juftSonlar()
+# list1.delEndMin()
+list1.x()
+
 
 list1.output()
