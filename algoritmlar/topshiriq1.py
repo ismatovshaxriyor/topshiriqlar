@@ -31,12 +31,12 @@ class LList:
     # <=== 1 - topshiriq ===>
     def firstZero(self):
         current = self.head
-        while current != None and current.Next != None:
+        while current != None:
             if current.Data == 0:
                 nextNode = Node(0)
                 nextNode.Next = current.Next
                 current.Next = nextNode
-                current = nextNode.Next
+                current = nextNode
             current = current.Next
     
     # <=== 2 - topshiriq ===>
@@ -107,12 +107,12 @@ class LList:
     # <=== 4 - topshiriq ===>
     def x(self):
         current = self.head
-        while current != None and current.Next != None:
+        while current != None:
             if current.Data % 2 == 1:
                 nextNode = Node(current.Data)
                 nextNode.Next = current.Next
                 current.Next = nextNode
-                current = nextNode.Next
+                current = nextNode
             current = current.Next
 
 list1 = LList()
