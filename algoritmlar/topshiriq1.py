@@ -6,11 +6,6 @@ class Node:
 class LList:
     def __init__(self):
         self.head = None
-    
-    def AddFirst(self, data):
-        node = Node(data)
-        node.Next = self.head
-        self.head = node
 
     def Add(self, data):
         node = Node(data)
