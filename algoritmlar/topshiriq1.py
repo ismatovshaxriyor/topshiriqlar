@@ -100,7 +100,7 @@ class LList:
         print(f"Juft sonlar {juft_sonlar} marta uchragan")
     
     # <=== 4 - topshiriq ===>
-    def x(self):
+    def toq_takrorlash(self):
         current = self.head
         while current != None:
             if current.Data % 2 == 1:
@@ -124,7 +124,7 @@ list1.Add(19)
 # list1.firstZero()
 # list1.juftSonlar()
 # list1.delEndMin()
-list1.x()
+list1.toq_takrorlash()
 
 
 list1.output()

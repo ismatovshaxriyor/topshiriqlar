@@ -1,13 +1,13 @@
 """ ---------------------- 7 - masala ----------------------- """
-# # txt = "Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took galley of type and scrambled it to make type specimen book."
+# txt = "Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took galley of type and scrambled it to make type specimen book."
 # txt = "I will be by far the most brilliant programmer in the world!!!."
-#
+
 # txt_list = txt.split()
 # new_txt_list = []
-#
-# while txt:
+
+# while True:
 #     shart = input("-> ")
-#
+
 #     if shart == "a":
 #         for word in txt_list:
 #             if "." not in word:
