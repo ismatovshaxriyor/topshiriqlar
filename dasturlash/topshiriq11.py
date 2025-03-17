@@ -74,4 +74,4 @@
 #     elif shart == "3":
 #         break
 #     else:
-#         print("Noto'g'ri buyruq kiritildi.\n")
+#         print("Noto'g'ri buyruq kiritildi :)\n")
