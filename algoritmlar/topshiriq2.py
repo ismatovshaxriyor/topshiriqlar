@@ -19,13 +19,27 @@ class DList:
         else:
             self.head = node
 
-    def takrorlash(self, item):
+    # <=== 1 - topshiriq ===>
+    def doubleItem(self, item):
         current = self.head
         while current != None:
             if current.Data > item:
                 node = Node(current.Data)
+                node.Prev = current
+                node.Next = current.Next
+                if current.Next is not None:
+                    current.Next.Prev = node
                 current.Next = node
-                node.Prev = node
+                current = node.Next
+            else:
+                current = current.Next
+
+    def delNext(self, item):
+        current = self.head.Next
+        while current != None:
+            if current.Prev.Data == item:
+                current.Prev.Next = current.Next
+                current.Next.Prev = current.Prev
             current = current.Next
 
     def display_forward(self):
@@ -54,7 +68,8 @@ dll.append(3)
 dll.append(2)
 dll.append(4)
 
-dll.takrorlash(2)
+dll.doubleItem(2)
+# dll.delNext(2)
 
 dll.display_forward()  
 dll.display_backward()
