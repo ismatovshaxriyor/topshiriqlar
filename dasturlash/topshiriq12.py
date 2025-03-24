@@ -27,7 +27,7 @@ while True:
 3. Yili bo'yicha qidirish
 4. Yangi kitob qo'shish
 5. Kitobni o'chirish
-6. Chiqish(istalgan belgi)
+6. Chiqish (istalgan belgi)
 """)
 
     choice = input("Bo'limni tanlang: ")
