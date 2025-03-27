@@ -61,6 +61,7 @@ class DList:
 
 
 dll = DList()
+
 dll.append(1)
 dll.append(2)
 dll.append(0)
