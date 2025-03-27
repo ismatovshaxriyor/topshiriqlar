@@ -34,13 +34,13 @@ class DList:
             else:
                 current = current.Next
 
-    def delNext(self, item):
-        current = self.head.Next
-        while current != None:
-            if current.Prev.Data == item:
-                current.Prev.Next = current.Next
-                current.Next.Prev = current.Prev
-            current = current.Next
+    # def delNext(self, item):
+    #     current = self.head.Next
+    #     while current != None:
+    #         if current.Prev.Data == item:
+    #             current.Prev.Next = current.Next
+    #             current.Next.Prev = current.Prev
+    #         current = current.Next
 
     def display_forward(self):
         current = self.head
