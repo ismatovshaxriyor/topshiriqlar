@@ -1,76 +1,83 @@
 class Node:
-    def __init__(self, data):
+    def __init__(self,data):
         self.Data = data
-        self.Prev = None
         self.Next = None
+        self.Prev = None
 
 class DList:
     def __init__(self):
         self.head = None
+        self.tail = None  
+        self.count = 0 
 
-    def append(self, data):
+    def Add(self, data):
         node = Node(data)
-        current = self.head
-        if current != None:  
-            while current.Next:
-                current = current.Next
-            current.Next = node
-            node.Prev = current  
-        else:
-            self.head = node
+        if not self.head:
+            self.head = self.tail = node
+        else:    
+            self.tail.Next = node
+            node.Prev = self.tail
+            self.tail = node
+        self.count += 1
 
     # <=== 1 - topshiriq ===>
     def doubleItem(self, item):
         current = self.head
-        while current != None:
+        while current is not None:
             if current.Data > item:
-                node = Node(current.Data)
-                node.Prev = current
-                node.Next = current.Next
-                if current.Next is not None:
-                    current.Next.Prev = node
-                current.Next = node
-                current = node.Next
-            else:
-                current = current.Next
+                newNode = Node(current.Data)
+                newNode.Next = current.Next
+                newNode.Prev = current
+                if current.Next: 
+                    current.Next.Prev = newNode
+                current.Next = newNode
+                if current == self.tail:
+                    self.tail = newNode
+                current = newNode
+                self.count += 1
+            current = current.Next
 
-    # def delNext(self, item):
-    #     current = self.head.Next
-    #     while current != None:
-    #         if current.Prev.Data == item:
-    #             current.Prev.Next = current.Next
-    #             current.Next.Prev = current.Prev
-    #         current = current.Next
-
-    def display_forward(self):
+    # <=== 2 - topshiriq ===>
+    def deleteItem(self, item):
         current = self.head
         while current is not None:
-            print(current.Data, end=" -> ")
+            if current.Data == item and current.Next is not None:
+                delItem = current.Next
+                current.Next = delItem.Next
+                if delItem.Next:
+                    delItem.Next.Prev = current
+                else:
+                    self.tail = current
+                self.count -= 1
+            current = current.Next
+
+
+    def output(self):
+        current = self.head
+        while current is not None:
+            print(current.Data, end=" <=> ")
             current = current.Next
         print(None)
 
-    def display_backward(self):
-        current = self.head
-        while current.Next:
-            current = current.Next
-        
+    def output_reverse(self):
+        current = self.tail
         while current is not None:
-            print(current.Data, end=" -> ")
+            print(current.Data, end=" <=> ")
             current = current.Prev
         print(None)
 
-
 dll = DList()
 
-dll.append(1)
-dll.append(2)
-dll.append(0)
-dll.append(3)
-dll.append(2)
-dll.append(4)
+dll.Add(1)
+dll.Add(2)
+dll.Add(3)
+dll.Add(3)
+dll.Add(2)
+dll.Add(4)
+dll.Add(5)
 
-dll.doubleItem(2)
-# dll.delNext(2)
+# dll.doubleItem(3)
+dll.deleteItem(2)
 
-dll.display_forward()  
-dll.display_backward()
+dll.output()
+dll.output_reverse()
