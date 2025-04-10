@@ -27,7 +27,8 @@ while True:
 3. Yili bo'yicha qidirish
 4. Yangi kitob qo'shish
 5. Kitobni o'chirish
-6. Chiqish (istalgan belgi)
+6. Kitobni tahrirlash
+7. Chiqish (istalgan belgi)
 """)
 
     choice = input("Bo'limni tanlang: ")
@@ -80,6 +81,24 @@ while True:
                 count += 1
         if count == 0:
             print("Kitob topilmadi\n")
+    elif choice == "6":
+        name = input("Qaysi kitobni tahrirlamoqchisiz: ")
+        for kitob in kitoblar:
+            if kitob.name.lower() == name.lower():
+                new_name = input("Yangi kitob nomini kiriting yoki . qo'ying: ")
+                new_author = input("Yangi kitob muallifini kiriting yoki . qo'ying: ")
+                new_year = input("Yangi kitob yilini kiriting yoki . qo'ying: ")
+                new_page = input("Yangi kitob betlar sonini kiriting yoki . qo'ying: ")
+
+                if new_name != ".":
+                    kitob.name = new_name
+                if new_author != ".":
+                    kitob.author = new_author
+                if new_year != ".":
+                    kitob.year = new_year
+                if new_page != ".":
+                    kitob.page = new_page
+                print("Kitob tahrirlandi\n")
     else:
         print("Dastur yakunlandi!")
         break
