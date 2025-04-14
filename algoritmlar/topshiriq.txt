@@ -1,2 +1,5 @@
-1 <-> 2 <-> 0 <-> 3 <-> 2 <-> 4 <-> None
-                <-3->
+10 ta raqamdan iborat toʻplam berilgan. Ikkita navbat yarating: Shu to’pladagi
+sonlardan birinchi navbatga toq o’rindagi sonlar (1, 3, ..., 9 o’rindagi), ikkinchisiga
+esa juft o’rindagi sonlar (2, 4, ..., 10 o’rindagi) olinishi kerak; har bir navbatdagi
+sonlarning kelish tartibi dastlabki to'plamdagi sonlarning kelish tartibiga mos
+kelishi kerak. Har ikkala nabatning boshi va oxiriga ko’rsatkichlarni chop qiling.
