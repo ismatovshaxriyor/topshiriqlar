@@ -1,5 +1,0 @@
-Lotin harflaridan tashkil topgan Jumla satri berilgan. Satr, undagi juft o„rinda
-turgan harflarni satr boshiga o„tkazish va toq o„rindagi harflarni teskari tartibda
-qayta joylashtirish orqali shifrlansin va qayta tiklansin. Masalan, “Programma ”
-satri “rgamamroP” satriga aylanadi. Programma
-                                    rgamamroP

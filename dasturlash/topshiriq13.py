@@ -70,19 +70,19 @@ navbat.Navbatga(1)
 navbat.Navbatga(2)
 navbat.Navbatga(3)
 
-navbat.Tozalash()
+# navbat.Tozalash()
 
-result = navbat.BushNavbat()
-if result == True:
-    print("Navbat bo'sh")
-else:
-    print("Navbat bo'sh emas")
+# result = navbat.BushNavbat()
+# if result == True:
+#     print("Navbat bo'sh")
+# else:
+#     print("Navbat bo'sh emas")
 
-navbat.Navbatdan()
+# navbat.Navbatdan()
 
-# lst = [1, -2, 3, -4, 5, -6]
-# MNN = MUSBAT_MANFIY_NAVBATLAR()
-# MNN.saralash(lst)
+lst = [1, -2, 3, -4, 5, -6]
+MNN = MUSBAT_MANFIY_NAVBATLAR()
+MNN.saralash(lst)
 
-# MNN.Print_musbat()
-# MNN.Print_manfiy()
+MNN.Print_musbat()
+MNN.Print_manfiy()

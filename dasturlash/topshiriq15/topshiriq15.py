@@ -1,10 +1,3 @@
-"""a) texnik holati yaxshi bo'lgan barcha avtomobillar haqidagi ma'lumot
-chop etilsin;
-b) ko'rsatilgan avtomobil nomeri bo'yicha uning texnik holati
-aniqlansin;
-d) texnik holati yaxshi bo'lgan barcha avtomobillar haqidagi ma'lumot
-fayldan o'chirilsin."""
-
 import pickle
 
 class Avto:
@@ -33,6 +26,7 @@ class TexnikHolat:
 
 avtolar = []
 holatlar = []
+
 umumiy_holarlar = {
     1: "Yaxshi",
     2: "Qoniqarli",
