@@ -24,6 +24,32 @@ class TexnikHolat:
         if self.tabel_raqam == tabel_raqami:
             return self.holat
 
+# avtolar = [
+#     Avto(101, "Islomov I.", "01A123AA", "Sedan"),
+#     Avto(102, "Karimova M.", "10B456BB", "Jeep"),
+#     Avto(103, "Rustamov D.", "80X789CC", "Hatchback"),
+#     Avto(104, "Abdullayev S.", "30C321DD", "SUV"),
+#     Avto(105, "Tursunova N.", "40D654EE", "Minivan"),
+#     Avto(106, "Xolmatov U.", "50E987FF", "Pickup"),
+#     Avto(107, "G'ulomov F.", "60F159GG", "Crossover"),
+#     Avto(108, "Ergasheva L.", "70G753HH", "Sedan"),
+#     Avto(109, "Davronov K.", "80H369II", "Hatchback"),
+#     Avto(110, "Yusupova R.", "90I852JJ", "Jeep"),
+# ]
+
+# holatlar = [
+#     TexnikHolat(101, 1),  
+#     TexnikHolat(102, 2),  
+#     TexnikHolat(103, 3),  
+#     TexnikHolat(104, 1),
+#     TexnikHolat(105, 3),
+#     TexnikHolat(106, 2),
+#     TexnikHolat(107, 1),
+#     TexnikHolat(108, 3),
+#     TexnikHolat(109, 2),
+#     TexnikHolat(110, 1),
+# ]
+
 avtolar = []
 holatlar = []
 
