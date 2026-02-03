@@ -16,13 +16,13 @@ class LList:
             current.Next = node
         else:
             self.head = node
-    
+
     def output(self):
         current = self.head
         while current != None:
             print(current.Data)
             current = current.Next
-    
+
     # <=== 1 - topshiriq ===>
     def firstZero(self):
         current = self.head
@@ -33,7 +33,7 @@ class LList:
                 current.Next = nextNode
                 current = nextNode
             current = current.Next
-    
+
     # <=== 2 - topshiriq ===>
     def findMin(self):
         min1 = self.head.Data
@@ -88,7 +88,7 @@ class LList:
                 prev.Next = cur.Next
         else:
             print(f"o'chirilayotgan element 1 marta uchragan\n")
-    
+
     # <=== 3 - topshiriq ===>
     def juftSonlar(self):
         current = self.head
@@ -98,7 +98,7 @@ class LList:
                 juft_sonlar += 1
             current = current.Next
         print(f"Juft sonlar {juft_sonlar} marta uchragan")
-    
+
     # <=== 4 - topshiriq ===>
     def toq_takrorlash(self):
         current = self.head
